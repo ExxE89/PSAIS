@@ -1,0 +1,7 @@
+mac: 0050563C4BE9
+memory_gb: 8
+cpus: 5
+install_mapr: false
+install_spark: true
+ports:
+  ssh: 2220

@@ -1,0 +1,4 @@
+elasticsearch
+nltk
+ruamel.yaml
+textblob

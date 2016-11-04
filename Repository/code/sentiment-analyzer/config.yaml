@@ -1,0 +1,19 @@
+classifier: naive_bayes
+
+database:
+  host: 141.7.63.160:9200
+
+log_level: DEBUG
+
+aggregation:
+  time_interval_minutes: 10
+
+search_filter:
+  bool:
+    should:
+      - missing:
+          field: sentiment_naive_bayes
+      # - range:
+      #     date:
+      #       gte: 2016-05-31
+      #       lt: 2017

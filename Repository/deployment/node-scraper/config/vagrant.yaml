@@ -1,0 +1,7 @@
+mac: 005056389D7A
+memory_gb: 8
+cpus: 8
+install_mapr: false
+install_spark: false
+ports:
+  ssh: 2221

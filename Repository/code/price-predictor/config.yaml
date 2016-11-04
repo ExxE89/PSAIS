@@ -1,0 +1,6 @@
+database:
+  host: 141.7.63.160:9200
+
+log_level: DEBUG
+
+aggregation_interval_minutes: 60

@@ -1,0 +1,35 @@
+database:
+  host: 141.7.63.160:9200
+
+log_level: DEBUG
+
+# Search filter format: https://www.elastic.co/guide/en/elasticsearch/guide/current/_ranges.html#_ranges_on_dates
+dump_tasks:
+  - index: stock_data
+    doc_type: stock_price
+    destination: stock.csv
+    max_documents: 500000
+    fieldnames:
+      - id
+      - date
+      - price
+    search_filter:
+      range:
+        date:
+          gte: 2016-05-15
+          lt: 2016-05-17 02:00:00
+
+  - index: twitter
+    doc_type: tweet
+    destination: tweets.csv
+    max_documents: 500000
+    fieldnames:
+      - id
+      - date
+      - sentiment_naive_bayes
+      - sentiment_polarity
+    search_filter:
+      range:
+        date:
+          gte: 2016-05-15
+          lt: 2016-05-17

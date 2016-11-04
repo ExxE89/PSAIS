@@ -1,0 +1,1 @@
+from .polarity import classify

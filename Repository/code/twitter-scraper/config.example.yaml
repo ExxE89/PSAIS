@@ -1,0 +1,20 @@
+database:
+  host: 127.0.0.1:9200
+
+log_level: DEBUG
+
+scraper:
+  languages:
+    - en
+
+  save_tweets: true
+
+  # For more info: https://dev.twitter.com/streaming/overview/request-parameters#track
+  track:
+    - facebook
+
+twitter:
+  access_secret: changeme
+  access_token: changeme
+  consumer_key: changeme
+  consumer_secret: changeme

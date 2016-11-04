@@ -1,0 +1,20 @@
+database:
+  host: 127.0.0.1:9200
+
+log_level: DEBUG
+
+scraper:
+  languages:
+    - en
+
+  save_tweets: true
+
+  # For more info: https://dev.twitter.com/streaming/overview/request-parameters#track
+  track:
+    - apple
+
+twitter:
+  access_secret: wbylQIJgfLxyraAxzcqGAof70uoUMerHKnqEamF6ZpV9M
+  access_token: 527887965-r7JskoXRfrUYxg11DXln5L2Q8OUkUXAmfBRTuxbZ
+  consumer_key: Iqtv3rqYuuVgy8VD6USkHq5cO
+  consumer_secret: ASp5zsxAu86temNYJWCYeapZOluwWZp014mYD59oh1XLFWBOVg
