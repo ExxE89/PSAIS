@@ -1,0 +1,7 @@
+FROM bigboards/java-8-__arch__
+ADD docker_files/test.txt /tmp/test.txt
+RUN //tmp/test.txt
+EXPOSE 9200 9300
+
+
+CMD["test"]
