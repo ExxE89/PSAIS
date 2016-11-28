@@ -2,13 +2,15 @@ FROM bigboards/java-8-__arch__
 
 ADD docker_files/test.txt /test.txt
 
-RUN wget -O /tmp/my-archive.tar.gz https://github.com/BigKuLaK/PSAIS/tree/dkramer.tar.gz
+USER root
+
+RUN apt-get update && apt-get install -y wget
+
+RUN wget -O /tmp/my-archive.tar.gz https://github.com/ExxE89/PSAIS.tar.gz
 RUN tar -xzf /tmp/my-archive.tar.gz -C /my/target/directory
 RUN apt-get update && apt-get install -y vim
 
-VOLUME /data
-VOLUME /etc/helloworld
 
 EXPOSE 9200 9300
 
-CMD ["/helloworld/bin/helloworld"]
+CMD ["helloworld"]
