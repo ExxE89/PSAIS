@@ -1,0 +1,16 @@
+FROM bigboards/java-8-__arch__
+
+RUN apt-get update && \
+    apt-get install -y wget && \
+    wget -q https://github.com/BigKuLaK/PSAIS/tree/dkramer.tgz -O /tmp/halloworld.tgz && \
+    tar xfz /tmp/halloworld.tgz -C /opt && \
+    rm /tmp/halloworld.tgz
+
+ADD Repository /opt/PSAIS/
+ADD Repository/docker/halloworld/docker_files/test.txt.txt /opt/PSAIS/Repository/docker/halloworld/docker_files/test.txt.txt
+
+
+EXPOSE 9200 9300
+
+
+CMD["test"]
