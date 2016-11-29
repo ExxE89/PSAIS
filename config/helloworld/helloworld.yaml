@@ -1,0 +1,17 @@
+classifier: naive_bayes
+
+database:
+  host: 141.7.63.114:57575
+
+log_level: DEBUG
+
+aggregation:
+  time_interval_minutes: 10
+
+spark_master: spark://141.7.63.114:57575
+
+
+search_filter:
+  range:
+    date:
+      gte: now-15m
